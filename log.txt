@@ -1,0 +1,9 @@
+5/25/25: started making game, basic layout, started main menu, 
+    started shop, started settings, basic player movement done, enimy made.
+5/26/25: started nockback, so many bugs. started heathbar
+5/27/25: finished nockback, posted first devlog. finished heathbar. made death screen.
+5/28/25: fixed shop issue. changed color of game container. started and finished level 2. 
+    added new enemy in lvl 2. fixed errors that came with lvl 2, 
+    changed the color of some of the screens, and the button color for most buttons.
+6/4/25: added background for shop, made new buttons for shop. added screen size settings. created screenSize.js
+    started work on coin system, made button in shop to reset coins.
