@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1>Wiping Coins Is PERMINANT</h1>
+    <h2>Please Make Shore that you want to wipe all of your coins</h2>
+    <button onclick="wipecoinsFINAL()">Wipe Coins (Perminant)</button>
+    <button onclick="takemeback()">Nevermind, Take me back</button>
+    <style>
+        head {
+            background-color: black;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            color: white
+        }
+
+        h2 {
+            color: white;
+        }
+    </style>
+    <script>
+        function wipecoinsFINAL() {
+            let coins = 0;
+            window.location.href = "wipingcoins.html";
+        }
+
+        function takemeback() {
+            window.location.href = "settings.html";
+        }
+    </script>
+</body>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weapon Shop</title>
+  <style>
+    body {
+      background-image: url("../../Sprites/Shop_Background_Sprite.png");
+      color: white;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #shop-box, #buy-options {
+      border: 2px solid white;
+      padding: 20px;
+      display: inline-block;
+      background-color: #222;
+      margin-top: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      border: 1px solid white;
+    }
+    #dialogue {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="shop-box">
+    <div id="dialogue">Welcome to my shop!</div>
+    
+    <div id="main-options">
+      <button onclick="exitShop()">Never Mind</button>
+      <button onclick="showBuyOptions()">I would like to buy something</button>
+    </div>
+
+    <div id="buy-options" style="display:none;">
+      <button onclick="selectFist()">Fist</button>
+    </div>
+  </div>
+
+  <script>
+    console.log("Shop Script Loaded");
+
+    function exitShop() {
+      document.getElementById("dialogue").innerText = "Goodbye!";
+      document.getElementById("main-options").style.display = "none";
+      document.getElementById("buy-options").style.display = "none";
+      console.log("Exiting Shop");
+      setTimeout(() => {
+        window.location.href = "main-menu.html";
+      }, 1500);
+    }
+
+    function showBuyOptions() {
+      document.getElementById("dialogue").innerText = "What would you like to buy?";
+      document.getElementById("main-options").style.display = "none";
+      document.getElementById("buy-options").style.display = "block";
+      
+      // Show Never Mind button again while buying
+      // We can either keep a separate container or just add a button inside buy-options
+      
+      // Let's add Never Mind button inside buy-options for convenience
+      if (!document.getElementById("buy-nevermind")) {
+        const nevermindBtn = document.createElement("button");
+        nevermindBtn.id = "buy-nevermind";
+        nevermindBtn.innerText = "Never Mind";
+        nevermindBtn.onclick = exitShop;
+        document.getElementById("buy-options").appendChild(nevermindBtn);
+      }
+    }
+
+    function selectFist() {
+      document.getElementById("dialogue").innerText = "You selected 'Fist'. It's free (for now).";
+    }
+  </script>
+</body>
+</html>

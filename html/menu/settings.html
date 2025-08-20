@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <script src="../../js/buttons.js" defer></script>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        select, button {
+            font-size: 16px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Settings</h1>
+
+    <div class="settings-group">
+        <label for="screen-size">Screen Size:</label>
+        <select id="screen-size">
+            <option value="laptop">Laptop (1280x590)</option>
+            <option value="pc" selected>PC (1900x899)</option>
+            <option value="tablet">Tablet (1024x768)</option>
+        </select>
+    </div>
+
+    <button onclick="saveSettings()">Save Settings</button>
+    <button onclick="backtomenu()">Back to Menu</button>
+    <button onclick="wipecoins()">Reset Coins</button>
+
+    <script>
+        // Load saved screen size
+        window.onload = () => {
+            const savedSize = localStorage.getItem("screenSize");
+            if (savedSize) {
+                document.getElementById("screen-size").value = savedSize;
+            }
+        };
+
+        function saveSettings() {
+            const screenSize = document.getElementById("screen-size").value;
+            localStorage.setItem("screenSize", screenSize);
+            alert("Settings saved!");
+        }
+
+        function backtomenu() {
+            window.location.href = "../../menu/main-menu.html";
+        }
+
+        function wipecoins() {
+            window.location.href= "AreYouShore.html"
+        }
+    </script>
+</body>
+</html>

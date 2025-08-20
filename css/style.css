@@ -1,0 +1,92 @@
+button {
+    display: block;       /* stack vertically */
+    margin: 10px 0;       /* space between buttons */
+    width: 200px;         /* optional fixed width */
+    padding: 10px;
+    font-size: 18px;
+  }
+  #menu-buttons {
+    display: block;
+  }
+  #game-container {
+    position: relative;
+    width: 1900px;
+    height: 899px;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  #player {
+    position: absolute;
+    left: 100px; /* Initial position */
+    top: 480px;  /* Initial position */
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+#enemy {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+#enemy-level1 {
+    position: absolute;
+    left: 300px; /* Initial position */
+    top: 300px;  /* Initial position */
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+#enemy-level2 {
+  position: absolute;
+  left: 600px; /* initial position for level 2 enemy */
+  top: 200px;
+  width: 50px;
+  height: 50px;
+  background-color: darkred; /* scarier color */
+}
+
+
+  #health-bar-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 25px;
+    background-color: #555; /* background of the bar */
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  #health-bar {
+    height: 100%;
+    width: 100%; /* start full health */
+    background-color: #4caf50; /* green */
+    transition: width 0.3s ease; /* smooth shrinking */
+  }
+  
+  #doorway {
+    position: absolute;
+    left: 1600px; /* Adjust as needed */
+    top: 400px;
+    width: 100px;
+    height: 100px;
+    background-color: green; /* temporary color for testing */
+  }
+  
+  you-died.html {
+    background-color: black
+  }
+
+  #coin-display {
+    position: absolute;
+    top: 10px;
+    left: 240px;
+  }
